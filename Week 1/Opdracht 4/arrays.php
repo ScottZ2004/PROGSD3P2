@@ -5,7 +5,7 @@ $aanhef = array(
     "persoon" => "klant");
 
 $korting = array(
-    "product" => "U heeft in de voorgaande bestelling voor [[product]] gekozen",
+    "product" => str_replace("[[product]]", "Platenspeler", "U heeft in de voorgaande bestelling voor [[product]] gekozen"),
     "korting" => "Bij Uw volgende bestelling kunnen we U een korting van 10% aanbieden op hetzelfde product"
 );
 
