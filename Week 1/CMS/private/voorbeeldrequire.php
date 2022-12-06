@@ -1,2 +1,3 @@
 <?php
-require "./gesplitst.php";
+require "../public/startpagina.php";
+echo "ddds";
