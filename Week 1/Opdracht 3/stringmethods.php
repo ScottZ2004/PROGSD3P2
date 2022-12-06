@@ -29,24 +29,10 @@
 <?php
 
 if (isset($_POST['submit'])) {
-
-    /*
-    * OPDRACHT 1:
-    * Voer onderstaande code in het naamveld in en kijk wat er gebeurd
-    * <script>alert('Niet beveiligd tegen script-injections')</script>
-    */
-    
     ?>    
     <script>alert('Niet beveiligd tegen script-injections')</script>
     <?php 
-    
 
-    /*
-    * OPDRACHT 2:
-    * Zorg ervoor dat er geen scripts meer ingevoerd kunnen worden.
-    * Hiervoor gebruik je de functie htmlspecialchars().
-    * Pas elke ingevoerde variabele waarde aan met de functie htmlspecialchars().
-    */
 
     $naam = $_POST['naam'];
     $straat = $_POST['straat'];
@@ -54,21 +40,17 @@ if (isset($_POST['submit'])) {
     $postcode = $_POST['postcode'];
     $woonplaats = $_POST['woonplaats'];
 
-    /*
-    * OPDRACHT 3:
-    * Zorg ervoor dat de naam, straat en woonplaats met een hoofdletter beginnen
-    * Hiervoor gebruik je de functie ucfirst()
-    *
-    * OPDRACHT 4:
-    * Alle andere letters moeten kleine letters zijn
-    * Hiervoor gebruik je de functie strtolower()
-    */
+    $naam = strtolower($naam);
+    $straat = strtolower($straat);
+    $huisnummer = strtolower($huisnummer);
+    $postcode = strtolower($postcode);
+    $woonplaats = strtolower($woonplaats);
+
     $naam = ucfirst($naam);
     $straat = ucfirst($straat);
     $huisnummer = ucfirst($huisnummer);
     $postcode = ucfirst($postcode);
     $woonplaats = ucfirst($woonplaats);
-
 
     echo htmlspecialchars(
         $naam.
@@ -77,6 +59,13 @@ if (isset($_POST['submit'])) {
         $postcode. 
         $woonplaats
     );
+
+    /*
+    * OPDRACHT 4:
+    * Alle andere letters moeten kleine letters zijn
+    * Hiervoor gebruik je de functie strtolower()
+    */
+    
 
     /*
      * OPDRACHT 5:
