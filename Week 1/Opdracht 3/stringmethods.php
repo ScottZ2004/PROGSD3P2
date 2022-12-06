@@ -55,14 +55,21 @@ if (isset($_POST['submit'])) {
     $woonplaats = $_POST['woonplaats'];
 
     /*
-     * OPDRACHT 3:
-     * Zorg ervoor dat de naam, straat en woonplaats met een hoofdletter beginnen
-     * Hiervoor gebruik je de functie ucfirst()
-     *
-     * OPDRACHT 4:
-     * Alle andere letters moeten kleine letters zijn
-     * Hiervoor gebruik je de functie strtolower()
-     */
+    * OPDRACHT 3:
+    * Zorg ervoor dat de naam, straat en woonplaats met een hoofdletter beginnen
+    * Hiervoor gebruik je de functie ucfirst()
+    *
+    * OPDRACHT 4:
+    * Alle andere letters moeten kleine letters zijn
+    * Hiervoor gebruik je de functie strtolower()
+    */
+    $naam = ucfirst($naam);
+    $straat = ucfirst($straat);
+    $huisnummer = ucfirst($huisnummer);
+    $postcode = ucfirst($postcode);
+    $woonplaats = ucfirst($woonplaats);
+
+
     echo htmlspecialchars(
         $naam.
         $straat. 
