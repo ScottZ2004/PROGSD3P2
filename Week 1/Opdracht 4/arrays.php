@@ -15,13 +15,7 @@ $ondertekening = array(
   "functie" => "Directeur Webshop beheer"
 );
 
-
-/*
-* Opdracht 3:
-* Vervang het woord [[product]] door jouw gekozen product in de winkelmand opdracht
-* Gebruik hiervoor de methode str_replace().
-*/
-
+$aanbieding = array_merge($aanhef, $korting, $ondertekening)
 /*
 * Opdracht 4:
 * Voeg nu alle arrays samen in een nieuwe array die je $aanbieding noemt.
