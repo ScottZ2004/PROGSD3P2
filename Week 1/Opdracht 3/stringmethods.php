@@ -31,10 +31,10 @@
 if (isset($_POST['submit'])) {
 
     /*
-     * OPDRACHT 1:
-     * Voer onderstaande code in het naamveld in en kijk wat er gebeurd
-     * <script>alert('Niet beveiligd tegen script-injections')</script>
-     */
+    * OPDRACHT 1:
+    * Voer onderstaande code in het naamveld in en kijk wat er gebeurd
+    * <script>alert('Niet beveiligd tegen script-injections')</script>
+    */
     
     ?>    
     <script>alert('Niet beveiligd tegen script-injections')</script>
@@ -42,11 +42,12 @@ if (isset($_POST['submit'])) {
     
 
     /*
-     * OPDRACHT 2:
-     * Zorg ervoor dat er geen scripts meer ingevoerd kunnen worden.
-     * Hiervoor gebruik je de functie htmlspecialchars().
-     * Pas elke ingevoerde variabele waarde aan met de functie htmlspecialchars().
-     */
+    * OPDRACHT 2:
+    * Zorg ervoor dat er geen scripts meer ingevoerd kunnen worden.
+    * Hiervoor gebruik je de functie htmlspecialchars().
+    * Pas elke ingevoerde variabele waarde aan met de functie htmlspecialchars().
+    */
+
     $naam = $_POST['naam'];
     $straat = $_POST['straat'];
     $huisnummer = $_POST['huisnummer'];
@@ -62,12 +63,13 @@ if (isset($_POST['submit'])) {
      * Alle andere letters moeten kleine letters zijn
      * Hiervoor gebruik je de functie strtolower()
      */
-    echo
-        $naam, '<br>',
-        $straat, '<br>',
-        $huisnummer, '<br>',
-        $postcode, '<br>',
-        $woonplaats, '<br>';
+    echo htmlspecialchars(
+        $naam.
+        $straat. 
+        $huisnummer. 
+        $postcode. 
+        $woonplaats
+    );
 
     /*
      * OPDRACHT 5:
