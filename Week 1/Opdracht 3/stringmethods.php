@@ -33,39 +33,38 @@ if (isset($_POST['submit'])) {
     <script>alert('Niet beveiligd tegen script-injections')</script>
     <?php 
 
-
+    
     $naam = $_POST['naam'];
     $straat = $_POST['straat'];
     $huisnummer = $_POST['huisnummer'];
     $postcode = $_POST['postcode'];
     $woonplaats = $_POST['woonplaats'];
 
-    $naam = strtolower($naam);
-    $straat = strtolower($straat);
-    $huisnummer = strtolower($huisnummer);
-    $postcode = strtolower($postcode);
-    $woonplaats = strtolower($woonplaats);
-
-    $naam = ucfirst($naam);
-    $straat = ucfirst($straat);
-    $huisnummer = ucfirst($huisnummer);
-    $postcode = ucfirst($postcode);
-    $woonplaats = ucfirst($woonplaats);
-
-    echo htmlspecialchars(
-        $naam.
-        $straat. 
-        $huisnummer. 
-        $postcode. 
-        $woonplaats
-    );
-
-    /*
-    * OPDRACHT 4:
-    * Alle andere letters moeten kleine letters zijn
-    * Hiervoor gebruik je de functie strtolower()
-    */
+    if(is_numeric($huisnummer)){
+        $naam = strtolower($naam);
+        $straat = strtolower($straat);
+        $huisnummer = strtolower($huisnummer);
+        $postcode = strtolower($postcode);
+        $woonplaats = strtolower($woonplaats);
     
+        $naam = ucfirst($naam);
+        $straat = ucfirst($straat);
+        $huisnummer = ucfirst($huisnummer);
+        $postcode = ucfirst($postcode);
+        $woonplaats = ucfirst($woonplaats);
+    
+        echo htmlspecialchars(
+            $naam." ".
+            $straat. " ".
+            $huisnummer. " ".
+            $postcode. " ".
+            $woonplaats
+        );
+
+    }else{
+        echo "huisnummer moet een getal zijn";
+    }
+
 
     /*
      * OPDRACHT 5:
