@@ -44,6 +44,6 @@ $ondertekening = array(
 * Toon de inhoud van de nieuwe array $aanbieding
 */
 
-var_dump($aanhef);
-var_dump($korting);
-var_dump($ondertekening);
+print_r(var_dump($aanhef));
+print_r(var_dump($korting));
+print_r(var_dump($ondertekening));
