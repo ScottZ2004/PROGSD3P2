@@ -15,20 +15,6 @@ $ondertekening = array(
   "functie" => "Directeur Webshop beheer"
 );
 
-$aanbieding = array_merge($aanhef, $korting, $ondertekening)
-/*
-* Opdracht 4:
-* Voeg nu alle arrays samen in een nieuwe array die je $aanbieding noemt.
-* Gebruik hiervoor de methode array_merge()
-*/
+$aanbieding = array_merge($aanhef, $korting, $ondertekening);
 
-/*
-* Opdracht 5:
-* Toon de inhoud van de nieuwe array $aanbieding
-*/
-
-print_r(var_dump($aanhef));
-echo "<br>";
-print_r(var_dump($korting));
-echo "<br>";
-print_r(var_dump($ondertekening));
+print_r(var_dump($aanbieding));
