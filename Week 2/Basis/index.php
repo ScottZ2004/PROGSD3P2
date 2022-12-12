@@ -1,12 +1,6 @@
 <?php
 
 /*
-* Opdracht 1:
-* Maak de $weekdagen array af zodat alle dagen van de week erin staan
-* Voor de key en value gebruik je kleine letters, geen hoofdletters
-*/
-
-/*
 * Opdracht 2:
 * Gebruik een loop om van alle elementen van je array de waarde te tonen op het scherm
 * Gebruik hiervoor een echo statement dus geen print_r of var_dump.
@@ -42,3 +36,7 @@ $weekdagen = array(
     'za' => 'zaterdag',
     'zo' => 'zondag'
 );
+
+foreach($weekdagen as $weekdag){
+    echo $weekdag;
+}
