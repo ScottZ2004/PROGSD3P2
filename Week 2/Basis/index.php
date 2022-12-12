@@ -1,12 +1,6 @@
 <?php
 
 /*
-* Opdracht 2:
-* Gebruik een loop om van alle elementen van je array de waarde te tonen op het scherm
-* Gebruik hiervoor een echo statement dus geen print_r of var_dump.
-*/
-
-/*
 * Opdracht 3:
 * Wijzig alle waardes in je array met behulp van een loop en een switch
 * Alle waardes moeten beginnen met een hoofdletter. Bij 'za' en 'zo' moeten de waardes
@@ -28,15 +22,19 @@
 */
 
 $weekdagen = array(
-    'ma' => 'maandag',
-    'di' => 'dinsdag',
-    'woe' => 'woensdag',
-    'do' => 'donderdag',
-    'vr' => 'vrijdag',
-    'za' => 'zaterdag',
+    'ma' => 'maandag ',
+    'di' => 'dinsdag ',
+    'woe' => 'woensdag ',
+    'do' => 'donderdag ',
+    'vr' => 'vrijdag ',
+    'za' => 'zaterdag ',
     'zo' => 'zondag'
 );
 
-foreach($weekdagen as $weekdag){
+foreach($weekdagen as $key => $weekdag){
+    $weekdag = ucfirst($weekdag);
+    if($key == 'za' || $key == 'zo'){
+        $weekdag = strtoupper($weekdag);
+    }
     echo $weekdag;
 }
