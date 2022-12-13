@@ -23,21 +23,21 @@ $weekdagen = array(
     'zo' => 'zondag'
 );
 
-$weekdagen_no_key = [];
+// $weekdagen_no_key = [];
 
 foreach($weekdagen as $key => $weekdag){
     $weekdag = ucfirst($weekdag);
     if($key == 'za' || $key == 'zo'){
         $weekdag = strtoupper($weekdag);
     }
-    array_push($weekdagen_no_key, $weekdag);
+    // array_push($weekdagen_no_key, $weekdag);
 }
 
-$omgekeerd = [];
+$omgekeerd = $weekdagen;
 
-for($i = count($weekdagen_no_key) - 1; $i >= 0; $i--){
-    array_push($omgekeerd, $weekdagen_no_key[$i]);
-}
+// for($i = count($weekdagen_no_key) - 1; $i >= 0; $i--){
+//     array_push($omgekeerd, $weekdagen_no_key[$i]);
+// }
 
-print_r($omgekeerd);
+print_r(array_reverse($omgekeerd)) ;
 
