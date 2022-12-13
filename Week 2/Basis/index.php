@@ -1,14 +1,6 @@
 <?php
 
 /*
-* Opdracht 3:
-* Wijzig alle waardes in je array met behulp van een loop en een switch
-* Alle waardes moeten beginnen met een hoofdletter. Bij 'za' en 'zo' moeten de waardes
-* van de dagen geheel uit hoofdletters bestaan.
-* Gebruik hiervoor de juiste functies
-*/
-
-/*
 * Opdracht 4:
 * Maak een nieuwe array en noem deze $omgekeerd.
 * De inhoud van deze array bestaat uit de elementen van de weekdagen array.
@@ -31,10 +23,21 @@ $weekdagen = array(
     'zo' => 'zondag'
 );
 
+$weekdagen_no_key = [];
+
 foreach($weekdagen as $key => $weekdag){
     $weekdag = ucfirst($weekdag);
     if($key == 'za' || $key == 'zo'){
         $weekdag = strtoupper($weekdag);
     }
-    echo $weekdag;
+    array_push($weekdagen_no_key, $weekdag);
 }
+
+$omgekeerd = [];
+
+for($i = count($weekdagen_no_key) - 1; $i >= 0; $i--){
+    array_push($omgekeerd, $weekdagen_no_key[$i]);
+}
+
+print_r($omgekeerd);
+
